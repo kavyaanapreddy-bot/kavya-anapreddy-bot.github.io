@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kavya Anapreddi | Data Analyst</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f8fafc; color: #1e293b; }
+
+    /* NAV */
+    nav { background: #4f46e5; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    nav .logo { color: white; font-size: 22px; font-weight: 700; }
+    nav ul { list-style: none; display: flex; gap: 25px; }
+    nav ul li a { color: #c7d2fe; text-decoration: none; font-size: 15px; }
+    nav ul li a:hover { color: white; }
+
+    /* HERO */
+    .hero { background: linear-gradient(135deg, #4f46e5, #7c3aed); color: white; padding: 80px 40px; text-align: center; }
+    .hero h1 { font-size: 48px; font-weight: 800; margin-bottom: 10px; }
+    .hero p { font-size: 20px; color: #c7d2fe; margin-bottom: 5px; }
+    .hero .location { font-size: 16px; color: #a5b4fc; margin-bottom: 30px; }
+    .hero .badges { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
+    .hero .badge { background: rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 25px; font-size: 14px; font-weight: 600; }
+    .hero .btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { background: white; color: #4f46e5; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px; }
+    .btn-outline { border: 2px solid white; color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px; }
+
+    /* SECTIONS */
+    section { padding: 60px 40px; max-width: 1100px; margin: 0 auto; }
+    h2 { font-size: 32px; font-weight: 700; color: #1e1b4b; margin-bottom: 10px; }
+    .section-line { width: 60px; height: 4px; background: #4f46e5; border-radius: 2px; margin-bottom: 40px; }
+
+    /* SKILLS */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .skill-card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); text-align: center; border-top: 4px solid #4f46e5; }
+    .skill-card h3 { font-size: 16px; font-weight: 700; color: #1e1b4b; margin-bottom: 10px; }
+    .skill-card p { font-size: 14px; color: #64748b; line-height: 1.6; }
+
+    /* PROJECTS */
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+    .project-card { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 2px 15px rgba(0,0,0,0.08); border-left: 5px solid #4f46e5; }
+    .project-card h3 { font-size: 20px; font-weight: 700; color: #1e1b4b; margin-bottom: 10px; }
+    .project-card p { font-size: 14px; color: #64748b; line-height: 1.7; margin-bottom: 15px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
+    .tag { background: #ede9fe; color: #4f46e5; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+    .project-link { color: #4f46e5; text-decoration: none; font-size: 14px; font-weight: 600; }
+
+    /* EXPERIENCE */
+    .exp-card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); margin-bottom: 20px; display: flex; gap: 20px; align-items: flex-start; }
+    .exp-icon { background: #ede9fe; padding: 12px; border-radius: 10px; font-size: 24px; }
+    .exp-content h3 { font-size: 18px; font-weight: 700; color: #1e1b4b; }
+    .exp-content p { font-size: 14px; color: #64748b; margin-top: 5px; }
+
+    /* CONTACT */
+    .contact-section { background: linear-gradient(135deg, #4f46e5, #7c3aed); border-radius: 20px; padding: 50px; text-align: center; color: white; }
+    .contact-section h2 { color: white; }
+    .contact-section p { color: #c7d2fe; margin: 10px 0 30px; font-size: 16px; }
+    .contact-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+    .contact-link { background: rgba(255,255,255,0.2); color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 15px; }
+    .contact-link:hover { background: rgba(255,255,255,0.3); }
+
+    /* FOOTER */
+    footer { text-align: center; padding: 20px; color: #94a3b8; font-size: 14px; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Kavya Anapreddi</div>
+  <ul>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Kavya Anapreddi</h1>
+  <p>Data Analyst | Mobile App Developer | 2026 Fresher</p>
+  <p class="location">📍 Hyderabad, India | Immediate Joiner</p>
+  <div class="badges">
+    <span class="badge">Python</span>
+    <span class="badge">SQL</span>
+    <span class="badge">Power BI</span>
+    <span class="badge">React Native</span>
+    <span class="badge">Tableau</span>
+    <span class="badge">Excel</span>
+  </div>
+  <div class="btns">
+    <a href="https://linkedin.com/in/kavya-anapreddi" target="_blank" class="btn-primary">LinkedIn Profile</a>
+    <a href="https://github.com/kavyaanapreddy-bot" target="_blank" class="btn-outline">GitHub</a>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="section-line"></div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h3>📊 Data Analytics</h3>
+      <p>Python, Pandas, NumPy, Data Cleaning, EDA, Statistical Analysis</p>
+    </div>
+    <div class="skill-card">
+      <h3>🗄️ Database</h3>
+      <p>SQL, MySQL, Query Optimization, Database Design</p>
+    </div>
+    <div class="skill-card">
+      <h3>📈 Visualization</h3>
+      <p>Power BI, Tableau, Google Looker Studio, Excel Dashboards</p>
+    </div>
+    <div class="skill-card">
+      <h3>📱 Mobile Dev</h3>
+      <p>React Native, Expo, JavaScript, Mobile App Development</p>
+    </div>
+    <div class="skill-card">
+      <h3>🤖 AI & Gen AI</h3>
+      <p>OpenAI API, Streamlit, Gen AI Applications, Prompt Engineering</p>
+    </div>
+    <div class="skill-card">
+      <h3>🛠️ Tools</h3>
+      <p>VS Code, GitHub, MySQL Workbench, Jupyter Notebook</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="section-line"></div>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <h3>📱 JobReady AI — Mobile App</h3>
+      <p>A complete career assistant mobile app for freshers. Features Resume Analyzer, Interview Practice, Scam Detector, and LinkedIn Message Generator. Built from scratch in 2 days.</p>
+      <div class="tags">
+        <span class="tag">React Native</span>
+        <span class="tag">Expo</span>
+        <span class="tag">JavaScript</span>
+      </div>
+      <a href="https://github.com/kavyaanapreddy-bot/jobready-ai-app" target="_blank" class="project-link">→ View on GitHub</a>
+    </div>
+
+    <div class="project-card">
+      <h3>🤖 Gen AI SQL Query Generator</h3>
+      <p>An AI-powered app that converts natural language to SQL queries using OpenAI API. Built with Python and Streamlit, connected to MySQL database.</p>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">OpenAI API</span>
+        <span class="tag">Streamlit</span>
+        <span class="tag">MySQL</span>
+      </div>
+      <a href="https://github.com/kavyaanapreddy-bot" target="_blank" class="project-link">→ View on GitHub</a>
+    </div>
+
+    <div class="project-card">
+      <h3>📊 Sales Performance Dashboard</h3>
+      <p>Interactive Power BI dashboard analyzing sales trends, regional performance, and KPIs. Includes drill-through reports and dynamic filters.</p>
+      <div class="tags">
+        <span class="tag">Power BI</span>
+        <span class="tag">DAX</span>
+        <span class="tag">Excel</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>👥 HR Attrition Analysis</h3>
+      <p>SQL and Power BI project analyzing employee attrition patterns, identifying key factors and trends to reduce employee turnover.</p>
+      <div class="tags">
+        <span class="tag">SQL</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">Data Analysis</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>🛒 Customer Segmentation</h3>
+      <p>Python-based customer segmentation analysis using Pandas and NumPy. Identified customer groups to improve marketing strategies.</p>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">NumPy</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>🌐 Network Traffic Analysis</h3>
+      <p>Analyzed network traffic data using Python to identify patterns, anomalies, and security insights from large datasets.</p>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">Data Analysis</span>
+        <span class="tag">Visualization</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <h2>Education & Certifications</h2>
+  <div class="section-line"></div>
+  <div class="exp-card">
+    <div class="exp-icon">🎓</div>
+    <div class="exp-content">
+      <h3>B.Tech — Electronics & Communication Engineering</h3>
+      <p>Miracle Educational Society Group of Institutions, Vizianagaram | 2026 Passout | 61.3%</p>
+    </div>
+  </div>
+  <div class="exp-card">
+    <div class="exp-icon">🎓</div>
+    <div class="exp-content">
+      <h3>Diploma — Electronics & Communication Engineering</h3>
+      <p>Chaitanya Engineering College, Visakhapatnam | 69.54%</p>
+    </div>
+  </div>
+  <div class="exp-card">
+    <div class="exp-icon">📜</div>
+    <div class="exp-content">
+      <h3>Data Analytics Certification</h3>
+      <p>LearnTube.ai / Google for Startups | Cert ID: DJA-B-1-2332848-0 | Python, SQL, Power BI, EDA, ML</p>
+    </div>
+  </div>
+  <div class="exp-card">
+    <div class="exp-icon">📜</div>
+    <div class="exp-content">
+      <h3>Power BI Workshop</h3>
+      <p>Tech Tip 24 | Dashboard Design, DAX, Data Modeling</p>
+    </div>
+  </div>
+  <div class="exp-card">
+    <div class="exp-icon">🏆</div>
+    <div class="exp-content">
+      <h3>TenzorX 2026 — National AI Hackathon</h3>
+      <p>Poonawalla Fincorp / Unstop | Built VidOnboard AI — Agentic Video Call Onboarding Solution</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-section">
+    <h2>Let's Connect!</h2>
+    <div class="section-line" style="margin: 10px auto 20px;"></div>
+    <p>Open to Data Analyst, Business Analyst, and MIS Executive roles in Hyderabad. Immediate Joiner!</p>
+    <div class="contact-links">
+      <a href="mailto:kavyaanapreddy@gmail.com" class="contact-link">📧 Email Me</a>
+      <a href="https://linkedin.com/in/kavya-anapreddi" target="_blank" class="contact-link">💼 LinkedIn</a>
+      <a href="https://github.com/kavyaanapreddy-bot" target="_blank" class="contact-link">💻 GitHub</a>
+      <a href="tel:9014297234" class="contact-link">📞 Call Me</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Kavya Anapreddi | Data Analyst | Hyderabad</p>
+</footer>
+
+</body>
+</html>
